@@ -1,0 +1,7 @@
+services:
+  star_wars_universe:
+    build: .
+    ports:
+     - "8000:80"
+    volumes:
+     - ./app:/app
