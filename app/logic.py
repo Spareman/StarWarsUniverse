@@ -1,6 +1,6 @@
-from .swapi_client import SWAPIClient
-from .schemas import StarshipCreate, CharacterCreate, FilmCreate
-from .crud import (insert_films, insert_characters, insert_starships, get_characters, get_starships, get_films,
+from swapi_client import SWAPIClient
+from schemas import StarshipCreate, CharacterCreate, FilmCreate
+from crud import (insert_films, insert_characters, insert_starships, get_characters, get_starships, get_films,
                   get_film_by_name, get_character_by_name, get_starship_by_name,
                   bulk_insert_movies_characters_starships)
 

@@ -48,4 +48,5 @@ pytest
 - Search characters by name: `GET /search/characters?character_name={name}`
 - Search starships by name: `GET /search/starships?starship_name={name}`
 
-**Note:** *page_size* defaults to 20 and has a maximum value of 100.
+**Note:** All the fetch and store endpoints return the list of the entities stored in this call. If entities already exist in the database, they will not be duplicated and an empty list is returned.
+<br>**Note:** *page_size* defaults to 20 and has a maximum value of 100.

@@ -1,24 +1,27 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Table, DateTime
 from sqlalchemy.orm import relationship
-from .database import Base
+from database import Base
 
 # Association tables for many-to-many relationships
 films_characters = Table(
     'films_characters', Base.metadata,
     Column('film_id', Integer, ForeignKey('films.id')),
-    Column('character_id', Integer, ForeignKey('characters.id'))
+    Column('character_id', Integer, ForeignKey('characters.id')),
+    extend_existing=True
 )
 
 films_starships = Table(
     'films_starships', Base.metadata,
     Column('film_id', Integer, ForeignKey('films.id')),
-    Column('starship_id', Integer, ForeignKey('starships.id'))
+    Column('starship_id', Integer, ForeignKey('starships.id')),
+    extend_existing=True
 )
 
 characters_starships = Table(
     'characters_starships', Base.metadata,
     Column('character_id', Integer, ForeignKey('characters.id')),
-    Column('starship_id', Integer, ForeignKey('starships.id'))
+    Column('starship_id', Integer, ForeignKey('starships.id')),
+    extend_existing=True
 )
 
 class Film(Base):

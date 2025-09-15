@@ -1,8 +1,8 @@
 import datetime
-from . import models
-from .decorators import db_exception_handler
-from .swapi_client import SWAPIClient
-from .schemas import StarshipCreate, CharacterCreate, FilmCreate
+import models
+from decorators import db_exception_handler
+from swapi_client import SWAPIClient
+from schemas import StarshipCreate, CharacterCreate, FilmCreate
 
 client = SWAPIClient()
 

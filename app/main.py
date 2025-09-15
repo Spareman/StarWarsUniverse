@@ -3,8 +3,10 @@ from typing import List, Optional
 from sqlalchemy.orm import Session
 import requests
 
-from .database import SessionLocal, engine
-from . import models, schemas, logic
+from database import SessionLocal, engine
+import models
+import schemas
+import logic
 
 
 models.Base.metadata.create_all(bind=engine)
